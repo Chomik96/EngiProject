@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.michalfladzinski.engiproject.ui.home.HomeFragment"
+        android:label="Live Data"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_camera"
+        android:name="com.michalfladzinski.engiproject.ui.camera.CameraFragment"
+        android:label="Live camera"
+        tools:layout="@layout/fragment_camera" />
+
+    <fragment
+        android:id="@+id/nav_charts"
+        android:name="com.michalfladzinski.engiproject.ui.charts.ChartsFragment"
+        android:label="Stats"
+        tools:layout="@layout/fragment_charts" />
+
+    <fragment
+        android:id="@+id/nav_author"
+        android:name="com.michalfladzinski.engiproject.ui.author.AuthorFragment"
+        android:label="@string/menu_author"
+        tools:layout="@layout/fragment_author" />
+
+</navigation>

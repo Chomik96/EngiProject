@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="3"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="40sp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:text="Start:"/>
+
+            <EditText
+                android:id="@+id/start_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Enter start date" />
+
+            <TextView
+                android:layout_width="40sp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:text="End:"/>
+
+            <EditText
+                android:id="@+id/end_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Enter end date" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#CCC"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="Humidity(%)"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:text="Average"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:text="Minimal"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:text="Maximal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/humidity_avg"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:text="@string/waiting_for_refresh"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/humidity_min"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:text="@string/waiting_for_refresh"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/humidity_max"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:text="@string/waiting_for_refresh"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#CCC"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="Pressure(hPa)"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:text="Average"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:text="Minimal"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:text="Maximal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/pressure_avg"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:text="@string/waiting_for_refresh"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/pressure_min"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:text="@string/waiting_for_refresh"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/pressure_max"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:text="@string/waiting_for_refresh"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#CCC"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="Temperature(°C)"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:text="Average"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:text="Minimal"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:text="Maximal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:weightSum="3">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/temperature_avg"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:text="@string/waiting_for_refresh"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/temperature_min"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:text="@string/waiting_for_refresh"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/temperature_max"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:text="@string/waiting_for_refresh"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="Live Data" />
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Live Camera" />
+        <item
+            android:id="@+id/nav_charts"
+            android:icon="@drawable/ic_menu_charts"
+            android:title="Stats" />
+        <item
+            android:id="@+id/nav_author"
+            android:icon="@drawable/ic_menu_author"
+            android:title="Info" />
+    </group>
+
+</menu>
